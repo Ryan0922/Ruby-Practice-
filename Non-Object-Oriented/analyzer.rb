@@ -19,21 +19,13 @@ def modulusNumbers(number1, number2)
 end
 puts "Type your first number"
 input1 = gets.chomp
-if input1.to_i.to_s == input1
-  number1 = input1.to_i
-else
-  puts "That is not a valid input"
-  abort
-end
+abort("This is not a valid input") unless input1.to_i.to_s == input1
+number1 = input1.to_i
 
 puts "Type your second number"
 input2 = gets.chomp
-if input2.to_i.to_s == input2
-  number2 = input2.to_i
-else
-  puts "That is not a valid input"
-  abort
-end
+abort("This is not a valid input") unless input2.to_i.to_s == input2
+number2 = input2.to_i
 
 puts "The addition of those numbers is equal to " + addNumbers(number1, number2).to_s
 puts "The difference of the two numbers is equal to " + subtractNumbers(number1, number2).to_s
