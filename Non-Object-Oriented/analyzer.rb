@@ -18,9 +18,23 @@ def modulusNumbers(number1, number2)
   number1 % number2
 end
 puts "Type your first number"
-number1 = gets.chomp.to_i
+input1 = gets.chomp
+if input1.to_i.to_s == input1
+  number1 = input1.to_i
+else
+  puts "That is not a valid input"
+  abort
+end
+
 puts "Type your second number"
-number2 = gets.chomp.to_i
+input2 = gets.chomp
+if input2.to_i.to_s == input2
+  number2 = input2.to_i
+else
+  puts "That is not a valid input"
+  abort
+end
+
 puts "The addition of those numbers is equal to " + addNumbers(number1, number2).to_s
 puts "The difference of the two numbers is equal to " + subtractNumbers(number1, number2).to_s
 puts "The product of the two numbers is equal to " +multiplyNumbers(number1, number2).to_s
